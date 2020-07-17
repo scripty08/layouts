@@ -10,7 +10,7 @@ export class Repository extends BaseRepository {
 
     async read(query, presenter) {
         try {
-            const response = await this.model.find(query);
+            const response = await this.model.findOne(query);
             presenter.present({code: READ, response: response});
         } catch (e) {
             Logger.error(e);

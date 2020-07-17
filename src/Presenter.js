@@ -13,21 +13,21 @@ export class Presenter {
             case READ:
                 this.response.send({
                     entries: [{
-                        ...response,
+                        ...response._doc,
                     }]
                 });
                 break;
             case UPDATE:
                 this.response.send({
                     entries: [{
-                        ...response,
+                        ...response._doc,
                     }]
                 });
                 break;
             case DESTROY:
                 this.response.send({
                     entries: [{
-                        ...response,
+                        ...response._doc,
                     }]
                 });
                 break;
